@@ -1,97 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('background1.jpg'); /* Replace with correct path */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
 
-<html>
- <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="index.html">
-    <head>
-        <body style="background-image: url('background1.jpg'); background-size: 1500px; background-position: center;"></body>
-       <style>
-       background- image{    
-        margin: 0;
-            font-family: Arial, sans-serif;
-      background-image: url('');
-background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-        }
-        nav {
-            background-color:  rgba(116, 197, 250, 0.8);
-            padding: 15px;
-            text-align: right;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            width:98;
-        }
-        .main-title {
-            text-align: none;
-            margin-top: 200px;
-            font-size: 40px;
-            text-shadow: 2px 2px 5px #f9fdfb;
-        }
-        .sub-title {
-            text-align: none;
-            font-size: 20px;
-            margin-top: 20px;
-            text-shadow: 2px 2px 4px  rgba(253, 253, 234, 0.8);
-        }
-        .section {
-            background-color: rgba(199, 200, 201, 0.9);
-            color: rgb(48, 21, 3);
-            margin: 50px auto;
-            padding: 20px;
-            width: 80%;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #866d6d;
-        }
-        footer {
-            background-color: rgba(116, 197, 250, 0.8);
-            color: rgb(202, 206, 205);
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 98%;
-        }
-    </style>
+    nav {
+      background-color: rgba(116, 197, 250, 0.8);
+      padding: 15px;
+      text-align: right;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .main-title {
+      text-align: center;
+      margin-top: 150px;
+      font-size: 40px;
+      text-shadow: 2px 2px 5px #f9fdfb;
+    }
+
+    .sub-title {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 10px;
+      text-shadow: 2px 2px 4px rgba(253, 253, 234, 0.8);
+    }
+
+    .section {
+      background-color: rgba(215, 233, 250, 0.9);
+      color: rgb(48, 21, 3);
+      margin: 50px auto;
+      padding: 20px;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #866d6d;
+    }
+
+    footer {
+      background-color: rgba(116, 197, 250, 0.8);
+      color: rgb(202, 206, 205);
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .experience-section {
+      position: relative;
+      margin-top: 80px;
+      padding: 60px 20px;
+      color: rgb(39, 3, 3);
+    }
+
+    .experience-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 60px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 50%;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: rgb(255, 101, 178);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-item .year {
+      color: rgb(247, 160, 210);
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 30px;
+        margin-top: 100px;
+      }
+
+      .sub-title {
+        font-size: 16px;
+      }
+
+      .section {
+        width: 90%;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      .timeline {
+        padding-left: 20px;
+      }
+
+      .timeline-item,
+      .timeline-item.left,
+      .timeline-item.right {
+        width: 100%;
+        left: 0;
+        text-align: left;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+    }
+  </style>
 </head>
-<body>
 
-<nav>
+<body>
+  
+ <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About Me</a>
     <a href="#contact">Contact</a>
-</nav>
+  </nav>
 
-<div class="main-title">Welcome to My Portfolio</div>
-<div class="sub-title">Creative Developer | Web Designer</div>
-
-<div id="projects" class="section">
-    <h2>Projects</h2>
+  <div class="main-title">Welcome to My Portfolio</div>
+  <div class="sub-title">Creative Developer | Web Designer</div>
+   <div id="about" class="section">
+    
+  <div id="projects" class="section">
+    <h2>1 Projects</h2>
     <p>Project 1 - Web Page</p>
     <a href="https://noohu786.github.io/FirstWebSite/" target="_blank">Visit My First Website</a>
-<p>Project 2 - Chess Board</p>
-    <a href="https://noohu786.github.io/Chess-board/" target="_blank">Visit My First Website</a> 
-    <p>Project 3 - Carrom Board</p>
-   <a href="https://noohu786.github.io/carromboard.html/" target="_blank">Visit My First Website</a> 
-</div>
 
-<div id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am a passionate web developer with experience in creating modern and responsive websites. I love turning ideas into reality through code.And i know Html,Css</p>
-</div>
+    <p>Project 2 - Chess Board</p>
+    <a href="https://noohu786.github.io/Chess-board/" target="_blank">Visit Chess Board</a>
+ <p>Project 3 - Carrom Board</p>
+   <a href="https://noohu786.github.io/carromboard.html/" target="_blank">Visit Carrom Board</a>
+  </div>
+   
+  
+  <h2>2 About Me</h2>
+    <p>My Name Is Mohamed Noohu MMS,I am Finishing Diploma in Colmputer Science And Engineering,And I am now Studying BE-Computer Science and Engineering And I Know The Basic Language Of C,C++,Java,Python,HTML,and Web Design.</p>
+  </div>
 
-<div id="contact" class="section">
+
+  <div class="experience-section">
+    <h2>03 EXPERIENCE</h2>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <p class="year">2025</p>
+        <h3>HTML</h3>
+        <h4>Logo Design</h4>
+        <p>I’m a Web Designer</p>
+      </div>
+      <div class="timeline-item right">
+        <p class="year">2025</p>
+        <h3>CSS</h3>
+        <h4>Creative Design</h4>
+        <p>I’m Designing Portfolio</p>
+      </div>
+      <div class="timeline-item left">
+        <p class="year">2025</p>
+        <h3>Digital Disigning</h3>
+        <h4>Create LoginPages</h4>
+        <p>I’m Designing Web Pages</p>
+      </div>
+    </div>
+  </div>
+>
+
+  <div id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: noohu786@email.com</p>
     <p>Phone: +1234567890</p>
-</div>
+  </div>
 
-<footer>© 2025 My Portfolio. All rights reserved.</footer>
+  <footer>© 2025 My Portfolio. All rights reserved.</footer>
 
 </body>
 </html>
