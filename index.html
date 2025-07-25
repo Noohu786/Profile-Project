@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('background1.jpg'); /* Replace with correct path */
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: white;
-    }
-
-    nav {
+   body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('background1.jpg'), url('background.jpg');
+  background-position: bottom center, top center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
+  color: rgb(255, 255, 255);
+}
+  nav {
       background-color: rgba(116, 197, 250, 0.8);
       padding: 15px;
       text-align: right;
     }
 
     nav a {
-      color: white;
+      color: rgb(36, 0, 0);
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
@@ -31,18 +32,18 @@
       text-align: center;
       margin-top: 150px;
       font-size: 40px;
-      text-shadow: 2px 2px 5px #f9fdfb;
+      text-shadow: 2px 2px 5px rgb(255, 125, 125);;
     }
 
     .sub-title {
       text-align: center;
       font-size: 20px;
       margin-top: 10px;
-      text-shadow: 2px 2px 4px rgba(253, 253, 234, 0.8);
+      text-shadow: 2px 2px 4px rgb(255, 125, 125);
     }
 
     .section {
-      background-color: rgba(215, 233, 250, 0.9);
+      background-color: rgba(154, 195, 233, 0.9);
       color: rgb(48, 21, 3);
       margin: 50px auto;
       padding: 20px;
@@ -53,19 +54,16 @@
 
     footer {
       background-color: rgba(116, 197, 250, 0.8);
-      color: rgb(202, 206, 205);
+      color: rgb(2, 49, 38);
       text-align: center;
       padding: 10px;
-      position: relative;
-      bottom: 0;
       width: 100%;
     }
 
     .experience-section {
-      position: relative;
       margin-top: 80px;
       padding: 60px 20px;
-      color: rgb(39, 3, 3);
+      color: rgb(248, 141, 141);
     }
 
     .experience-section h2 {
@@ -113,46 +111,80 @@
       margin-bottom: 5px;
     }
 
+    /* PROFESSIONAL SKILLS SECTION */
+    .professional {
+      padding: 60px 20px;
+      background-color: rgba(252, 168, 162, 0.1);
+      color: rgb(255, 125, 125);
+      text-align: center;
+    }
+
+    .professional h2 {
+      font-size: 36px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .professional h4 {
+      font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    .skill {
+      margin: 20px auto;
+      width: 80%;
+      text-align: left;
+    }
+
+    .label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+    }
+
+    .bar {
+      background-color: #ffffff;
+      height: 8px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .fill {
+      height: 8px;
+      background-color: #00ff87;
+      width: 0;
+      transition: width 1.5s ease-in-out;
+    }
+
+    .wordpress .fill { width: 75%; }
+    .drupal .fill { width: 70%; }
+    .wix .fill { width: 95%; }
+    .photoshop .fill { width: 85%; }
+    .illustrator .fill { width: 80%; }
+    .javascript .fill { width: 85%; }
+    .htmlcss .fill { width: 80%; }
+
     @media (max-width: 768px) {
-      .main-title {
-        font-size: 30px;
-        margin-top: 100px;
-      }
-
-      .sub-title {
-        font-size: 16px;
-      }
-
-      .section {
-        width: 90%;
-      }
-
-      nav {
-        text-align: center;
-      }
-
-      .timeline {
-        padding-left: 20px;
-      }
-
-      .timeline-item,
-      .timeline-item.left,
-      .timeline-item.right {
+      .main-title { font-size: 30px; margin-top: 100px; }
+      .sub-title { font-size: 16px; }
+      .section { width: 90%; }
+      nav { text-align: center; }
+      .timeline { padding-left: 20px; }
+      .timeline-item, .timeline-item.left, .timeline-item.right {
         width: 100%;
         left: 0;
         text-align: left;
       }
-
-      .timeline::before {
-        left: 20px;
-      }
+      .timeline::before { left: 20px; }
+      .skill { width: 95%; }
     }
   </style>
 </head>
 
 <body>
-  
- <nav>
+
+  <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About Me</a>
     <a href="#contact">Contact</a>
@@ -160,27 +192,60 @@
 
   <div class="main-title">Welcome to My Portfolio</div>
   <div class="sub-title">Creative Developer | Web Designer</div>
-   <div id="about" class="section">
-    
+
+  <div id="about" class="section">
+    <h2>01 About Me</h2>
+    <p>My Name Is Mohamed Noohu MMS, I am finishing Diploma in Computer Science and Engineering, and now i'm studying BE-Computer Science and Engineering.Now I am doing Internship In Zumi Solutions Private Limited,Bengaluru
+      .</p>
+  </div>
+
   <div id="projects" class="section">
-    <h2>1 Projects</h2>
+    <h2>02 Projects</h2>
     <p>Project 1 - Web Page</p>
     <a href="https://noohu786.github.io/FirstWebSite/" target="_blank">Visit My First Website</a>
-
     <p>Project 2 - Chess Board</p>
     <a href="https://noohu786.github.io/Chess-board/" target="_blank">Visit Chess Board</a>
- <p>Project 3 - Carrom Board</p>
-   <a href="https://noohu786.github.io/carromboard.html/" target="_blank">Visit Carrom Board</a>
-  </div>
-   
-  
-  <h2>2 About Me</h2>
-    <p>My Name Is Mohamed Noohu MMS,I am Finishing Diploma in Colmputer Science And Engineering,And I am now Studying BE-Computer Science and Engineering And I Know The Basic Language Of C,C++,Java,Python,HTML,and Web Design.</p>
+    <p>Project 3 - Carrom Board</p>
+    <a href="https://noohu786.github.io/carromboard.html/" target="_blank">Visit Carrom Board</a>
   </div>
 
+  <!-- PROFESSIONAL SKILLS SECTION -->
+  <div class="professional">
+    <h2> 03 PROFESSIONAL</h2>
+    <h4>MY KNOWLEDGE LEVEL IN SOFTWARE</h4>
+
+    <div class="skill wordpress">
+      <div class="label"><span>C</span><span>50%</span></div>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+    <div class="skill drupal">
+      <div class="label"><span>C++</span><span>40%</span></div>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+    <div class="skill wix">
+      <div class="label"><span>JAVA</span><span>65%</span></div>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+    <div class="skill photoshop">
+      <div class="label"><span>PYTHON</span><span>35%</span></div>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+    <div class="skill illustrator">
+      <div class="label"><span>WEBDESIGN</span><span>60%</span></div>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+    <div class="skill javascript">
+      <div class="label"><span>DBMS</span><span>75%</span></div>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+    <div class="skill htmlcss">
+      <div class="label"><span>HTML & CSS</span><span>80%</span></div>
+      <div class="bar"><div class="fill"></div></div>
+    </div>
+  </div>
 
   <div class="experience-section">
-    <h2>03 EXPERIENCE</h2>
+    <h2>04 EXPERIENCE</h2>
     <div class="timeline">
       <div class="timeline-item left">
         <p class="year">2025</p>
@@ -196,16 +261,15 @@
       </div>
       <div class="timeline-item left">
         <p class="year">2025</p>
-        <h3>Digital Disigning</h3>
-        <h4>Create LoginPages</h4>
+        <h3>Digital Designing</h3>
+        <h4>Create Login Pages</h4>
         <p>I’m Designing Web Pages</p>
       </div>
     </div>
   </div>
->
 
   <div id="contact" class="section">
-    <h2>Contact</h2>
+    <h2>05 Contact</h2>
     <p>Email: noohu786@email.com</p>
     <p>Phone: +1234567890</p>
   </div>
